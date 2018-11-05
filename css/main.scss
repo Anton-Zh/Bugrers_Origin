@@ -1,0 +1,22 @@
+//colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+
+//normalize
+@import "_setup/normalize.scss";
+@import "_setup/fonts.scss";
+@import "_setup/layout.scss"; //обнуление стандартных свойств тегов
+
+//blocks
+@import "./blocks/hero.scss";
+@import "./blocks/header.scss";
+@import "./blocks/nav.scss";
+@import "./blocks/btn.scss";
+@import "./blocks/scroll.scss";
+@import "./blocks/section-title.scss";
+@import "./blocks/fixed-menu.scss";
+@import "./blocks/best.scss";
+@import "./blocks/reviews.scss";
+ 
