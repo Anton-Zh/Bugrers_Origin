@@ -1,0 +1,52 @@
+.logo__pic {
+  width: rem(92px);
+  height: rem(69px);
+}
+
+.to-next-section__pic {
+  width: rem(60px);
+  height: rem(20px);
+}
+
+.best__pic{
+  &-meat {
+      width: rem(97px);
+      height: rem(89px);
+  }   
+
+  &-hand {
+      width: rem(73px);
+      height: rem(85px);
+  }
+
+  &-natural {
+      width: rem(88px);
+      height: rem(75px);
+  }
+}
+
+.phone__pic {
+  width: rem(15px);
+  height: rem(15px);
+  fill: $red;
+  margin-right: rem(10px);
+}
+
+.social__pic { 
+  &-vk {
+      width: rem(23px);
+      height: rem(13px);
+    }
+  &-fb {
+      width: rem(20px);
+      height: rem(20px);
+    }
+  &-ins {
+      width: rem(20px);
+      height: rem(20px);
+    }
+  &-twt {
+      width: rem(20px);
+      height: rem(18px);
+    }
+}

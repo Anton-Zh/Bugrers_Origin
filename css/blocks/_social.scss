@@ -1,0 +1,15 @@
+.social {
+  display: flex;
+  align-self: center;
+  width: 50%;
+  justify-content: end;
+ 
+  &__pic {
+    margin-left: rem(20px);
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
