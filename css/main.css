@@ -1094,8 +1094,6 @@ footer {
 
 .social {
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-item-align: center;
   align-self: center;
   width: 50%;
@@ -1107,9 +1105,6 @@ footer {
     opacity: 0.3; }
     .social__pic:hover {
       opacity: 1; }
-  @media (max-width: 768px) {
-    .social {
-      display: -webkit-inline-box; } }
 
 .logo__pic {
   width: 5.75rem;

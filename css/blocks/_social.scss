@@ -1,5 +1,5 @@
 .social {
-  display: flex;
+  display: -webkit-box;
   align-self: center;
   width: 50%;
   justify-content: end;
@@ -11,8 +11,5 @@
     &:hover {
       opacity: 1;
     }
-  }
-  @include tablets {
-    display: -webkit-inline-box;
   }
 }
