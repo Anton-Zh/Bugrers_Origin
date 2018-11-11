@@ -1023,6 +1023,9 @@ footer {
 
 .map {
   background: url(../image/backgrounds/bg_map.png) center center/cover no-repeat; }
+  @media (max-width: 480px) {
+    .map {
+      background: url(../image/backgrounds/bg_map_phones.png) center center/cover no-repeat; } }
 
 .footer {
   background: url(../image/backgrounds/bg_form.png);

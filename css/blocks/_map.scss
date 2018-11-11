@@ -1,5 +1,9 @@
 .map {
   background: url(../image/backgrounds/bg_map.png) center center / cover no-repeat;
+
+  @include phones {
+  background: url(../image/backgrounds/bg_map_phones.png) center center / cover no-repeat;
+  }
 }
 
 
