@@ -12,4 +12,7 @@
       opacity: 1;
     }
   }
+  @include tablets {
+    display: -webkit-inline-box;
+  }
 }
