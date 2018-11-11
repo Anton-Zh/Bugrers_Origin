@@ -1,0 +1,16 @@
+.contacts__tel__box {
+  display: flex;
+  align-items: center;
+}
+
+.contacts {
+  display: block;
+  color: #fff;
+  width: 50%;  
+
+  &_tel {
+    color: $orange;
+    font-weight: 500;
+  }
+}
+

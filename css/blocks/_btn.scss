@@ -1,0 +1,17 @@
+.btn {
+  border-radius: rem(5px);
+  padding: rem(10px) rem(15px);
+  background: $red;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: rem(13px);
+  font-weight: bolder;
+}
+
+.btn--black {
+  margin-left: rem(20px);
+  display: initial;
+  background-color: #2f3234;
+  
+}
