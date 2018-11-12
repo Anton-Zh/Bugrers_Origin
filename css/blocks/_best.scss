@@ -11,6 +11,10 @@
 .best__content {
     justify-content: center;
     align-content: center;
+
+    @include phones {
+        height: inherit;
+    }
 }
 
 .best__list {
@@ -22,6 +26,8 @@
 
     @include phones {
         flex-direction: column;
+        align-items: center;
+        height: 70%;
     }
 }
 
@@ -43,9 +49,11 @@
     }
 
     @include phones {
+        // width: 95%;
         display: flex;
         flex-direction: initial;
         margin-right: rem(0px);
+        align-items: center;
         
 
     }
@@ -56,13 +64,33 @@
     height: auto;
     margin-bottom: rem(30px);
 
+    &-2 {
+        @include phones {
+            margin-left: rem(20px);
+        }
+    }
+
     &-3 {
         margin-bottom: rem(39px);
+        @include phones {
+            margin-left: rem(10px);
+            margin-right: rem(30px);
+        }
     }      
+
+    @include phones {
+        margin-bottom: rem(0px);
+        margin-right: rem(40px);
+    }
 }
 
 .best__item__content {
     text-align: center;
+
+    @include phones {
+        
+        text-align: initial;
+    }
 
     
 }

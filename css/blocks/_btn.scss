@@ -9,9 +9,24 @@
   font-weight: bolder;
 }
 
+.mobile-menu-icon {
+  display: none;
+}
+
 .btn--black {
   margin-left: rem(20px);
   display: initial;
   background-color: #2f3234;
+
+  &-phones {
+    display: none;
+  }
+
+  @include phones {
+    font-size: rem(12px);
+    margin-left: rem(10px);
+
+    
+  }
   
 }

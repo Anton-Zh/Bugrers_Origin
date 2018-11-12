@@ -115,6 +115,14 @@ footer {
   
   &--black {
     color: $black;
+    @include phones {
+      height: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: rem(0px);
+    }
+
   }
 
   &--white {

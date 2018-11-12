@@ -1,16 +1,30 @@
 .contacts__tel__box {
   display: flex;
   align-items: center;
+
+  @include phones {
+    justify-content: center;
+    margin-bottom: rem(15px);
+  }
 }
 
 .contacts {
   display: block;
   color: #fff;
   width: 50%;  
-
+ 
   &_tel {
     color: $orange;
     font-weight: 500;
+    @include phones {
+      display: flex;
+      justify-content: center;
+    }
   }
+
+  @include phones {
+    width: 100%;
+  } 
+  
 }
 
