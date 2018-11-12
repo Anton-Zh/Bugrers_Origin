@@ -1087,7 +1087,7 @@ footer {
   width: auto;
   -webkit-box-align: end;
   -ms-flex-align: end;
-  align-items: end; }
+  align-items: flex-end; }
   .menu-list__item-meat {
     background-image: url(../image/backgrounds/bg_meat.png);
     right: 10rem; }
