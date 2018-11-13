@@ -7,6 +7,14 @@
   text-transform: uppercase;
   font-size: rem(13px);
   font-weight: bolder;
+
+  &--order {
+    margin-left: rem(0px);
+    background: transparent;
+    text-transform: none;
+    border-width: 0;
+    font-size: rem(14px);
+  }
 }
 
 .mobile-menu-icon {

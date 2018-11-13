@@ -32,9 +32,7 @@
                 </ul>
               </nav>
               <a href="" class="btn btn--red">Заказать</a>
-              <svg alt="mobile-menu" class="mobile-menu-icon">
-                <use xlink:href="image/sprite.svg#mobile-menu"></use>
-              </svg>
+              <div class="hamburger"></div>
             </div>
           </header>
           <div class="hero__container">
@@ -233,7 +231,8 @@
 
       <section class="reviews section">
         <ul class="reviews__list">
-          <li class="reviews__item" style="background-image: url(image/review-color/photo_review1.png);">
+          <li class="reviews__item" style="background: url(image/review-color/photo_review1.png) center center /cover no-repeat;">
+              <!--  -->
             <div class="reviews__hover-block">
               <h3 class="reviews__title">Девушка</h3>
               <div class="reviews__text">
@@ -243,7 +242,7 @@
               <a href="#" class="btn btn--black btn--black-phones">читать отзыв</a>
             </div>
           </li>
-          <li class="reviews__item" style="background-image: url(image/review-color/photo_review2.png);">
+          <li class="reviews__item" style="background: url(image/review-color/photo_review2.png) center center /cover no-repeat;">
             <div class="reviews__hover-block">
               <h3 class="reviews__title">Константин Спилберг</h3>
               <div class="reviews__text">
@@ -253,7 +252,7 @@
                 <a href="#" class="btn btn--black btn--black-phones">читать отзыв</a>
             </div>
           </li>
-          <li class="reviews__item" style="background-image: url(image/review-color/photo_review3.png);">
+          <li class="reviews__item" style="background: url(image/review-color/photo_review3.png) center center /cover no-repeat;">
             <div class="reviews__hover-block">
               <h3 class="reviews__title">Приятная</h3>
               <div class="reviews__text">
@@ -263,7 +262,7 @@
                 <a href="#" class="btn btn--black btn--black-phones">читать отзыв</a>
             </div>
           </li>
-          <li class="reviews__item" style="background-image: url(image/review-color/photo_review4.png);">
+          <li class="reviews__item" style="background: url(image/review-color/photo_review4.png) center center /cover no-repeat;">
             <div class="reviews__hover-block">
               <h3 class="reviews__title">Бойскаут</h3>
               <div class="reviews__text">
@@ -273,7 +272,7 @@
                 <a href="#" class="btn btn--black btn--black-phones">читать отзыв</a>
             </div>
           </li>
-          <li class="reviews__item" style="background-image: url(image/review-color/photo_review5.png);">
+          <li class="reviews__item" style="background: url(image/review-color/photo_review5.png) center center /cover no-repeat;">
             <div class="reviews__hover-block">
               <h3 class="reviews__title">Сын депутата</h3>
               <div class="reviews__text">
@@ -283,7 +282,7 @@
                 <a href="#" class="btn btn--black btn--black-phones">читать отзыв</a>
             </div>
           </li>
-          <li class="reviews__item" style="background-image: url(image/review-color/photo_review6.png);">
+          <li class="reviews__item" style="background: url(image/review-color/photo_review6.png) center center /cover no-repeat;">
             <div class="reviews__hover-block">
               <h3 class="reviews__title">Умная</h3>
               <div class="reviews__text">
@@ -293,7 +292,7 @@
                 <a href="#" class="btn btn--black btn--black-phones">читать отзыв</a>
             </div>
           </li>
-          <li class="reviews__item" style="background-image: url(image/review-color/photo_review7.png);">
+          <li class="reviews__item" style="background: url(image/review-color/photo_review7.png) center center /cover no-repeat;">
             <div class="reviews__hover-block">
               <h3 class="reviews__title">Художник</h3>
               <div class="reviews__text">
@@ -303,7 +302,7 @@
                 <a href="#" class="btn btn--black btn--black-phones">читать отзыв</a>
             </div>
           </li>
-          <li class="reviews__item" style="background-image: url(image/review-color/photo_review8.png);">
+          <li class="reviews__item" style="background: url(image/review-color/photo_review8.png) center center /cover no-repeat;">
             <div class="reviews__hover-block">
               <h3 class="reviews__title">Какой-то актер</h3>
               <div class="reviews__text">
@@ -322,11 +321,78 @@
         </div>
       </section> -->
 
-      <!-- <section class="order section">
-        <div class="order_container">
-          <div class="order__content"></div>
+      <section class="order section section_centered">
+        <div class="container">
+          <div class="section-title section-title--order">Закажите доставку</div>
+          <div class="form">
+            <form action="#" class="form__elem">
+              <div class="form__content">
+                <div class="form__content-left">
+                  <div class="form__row">
+                    <label class="form__block">
+                      <div class="form__block-title">Имя</div>
+                      <input type="text" class="form__input">
+                    </label>
+                    <label class="form__block">
+                      <div class="form__block-title">Телефон</div>
+                      <input type="text" class="form__input">
+                    </label>
+                  </div>
+                  <div class="form__row">
+                    <label class="form__block">
+                      <div class="form__block-title">Улица</div>
+                      <input type="text" class="form__input">
+                    </label>
+                  </div>
+                  <div class="form__row">
+                    <label class="form__block">
+                      <div class="form__block-title">Дом</div>
+                      <input type="text" class="form__input">
+                    </label>
+                    <label class="form__block">
+                      <div class="form__block-title">Корпус</div>
+                      <input type="text" class="form__input">
+                    </label>
+                    <label class="form__block">
+                      <div class="form__block-title">Квартира</div>
+                      <input type="text" class="form__input">
+                    </label>
+                    <label class="form__block form__block--floor">
+                      <div class="form__block-title form__block-title">Этаж</div>
+                      <input type="text" class="form__input">
+                    </label>
+                  </div>
+                </div>
+                <div class="form__content-rigth">
+                  <label class="form__block">
+                    <div class="form__block-title">Комментарий</div>
+                    <textarea name="comment" type="text" class="form__input form__input-area"></textarea>
+                  </label>
+                  <div class="radio__buttons">
+                    <label class="radio__buttons__label">
+                        <input name="show" class="radio__mark" type="radio">
+                        <span class="radio__mark-fake"></span>
+                        <span class="radio__mark-text">Потребуется сдача</span>
+                    </label>
+                    <label class="radio__buttons__label">
+                        <input name="show" class="radio__mark" type="radio" checked="">
+                        <span class="radio__mark-fake"></span>
+                        <span class="radio__mark-text">Оплата по карте</span>
+                    </label>
+                </div>
+                  <label class="form__block">
+                    <p class="form__paragraf form__paragraf-2"><input type="checkbox" class="form__checkbox" checked>Не перезванивать</p>
+                  </label>
+                  <div class="form__buttons">
+                    <a href="#" class="btn btn--red">Заказать</a>
+                    <button type="reset" class="btn btn--order">Очистить</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-      </section> -->
+      </section>
 
       <section class="map section">
         <div class="map_container"></div>

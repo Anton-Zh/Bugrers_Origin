@@ -1,0 +1,41 @@
+.hamburger {
+  width: rem(25px);
+  height: rem(4px);
+  background: #fff;
+  position: relative;
+  margin-bottom: rem(20px);
+  margin-top: rem(20px);
+  margin-left: rem(40px);
+  border-radius: rem(5px);
+  display: none;
+
+  @include tablets {
+    display: block;
+    
+  }
+
+  @include phones {
+    display: block;
+  }
+}
+
+.hamburger:after, .hamburger:before {
+  content: "";
+  display: block;
+  width: rem(25px);
+  height: rem(4px);
+  background: #fff;
+  position: absolute;
+  border-radius: rem(5px);
+
+}
+
+.hamburger:after,  {
+  top: 100%;
+  margin-top: rem(6px);
+}
+
+.hamburger:before {
+  bottom: 100%;
+  margin-bottom: rem(6px);
+}

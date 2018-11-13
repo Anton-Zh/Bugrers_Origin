@@ -44,10 +44,6 @@
         margin-right: rem(0px);
     }
 
-    &-2 {
-        padding-top: rem(3px);
-    }
-
     @include phones {
         // width: 95%;
         display: flex;
@@ -66,15 +62,16 @@
 
     &-2 {
         @include phones {
-            margin-left: rem(20px);
+            margin-left: rem(0px);
         }
     }
 
     &-3 {
-        margin-bottom: rem(39px);
+        margin-bottom: rem(26px);
+
         @include phones {
             margin-left: rem(10px);
-            margin-right: rem(30px);
+            margin-right: rem(27px);
         }
     }      
 

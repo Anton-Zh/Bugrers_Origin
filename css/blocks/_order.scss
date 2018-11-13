@@ -1,0 +1,138 @@
+.order {
+  background: url('../image/backgrounds/bg_form.png') center center no-repeat;
+  background-size: cover;
+}
+
+.form__block-title {
+  color: #fff;
+}
+
+.form__input {
+  border: none;
+  border-radius: rem(5px);
+  padding: rem(5px);
+  width: 100%;
+
+  &-area {
+    height: rem(100px);
+
+  }
+}
+
+.form__row {
+  display: flex;
+  margin-bottom: rem(20px);
+}
+
+.form__block {
+  flex: 1;
+  margin-right: rem(20px);
+  
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include phones {
+    &--floor {
+      display: none;
+    }
+    &:nth-child(3) {
+      margin-right: 0;
+    }
+  }
+  
+}
+
+.form__content {
+  display: flex;
+
+  @include tablets {
+    width: 80%;
+    align-items: center;
+  }
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.form__content-rigth {
+  width: 50%;
+  margin-left: rem(30px);
+
+  @include tablets {
+    width: 100%;
+    margin-left: rem(0px);
+  }
+}
+
+.form__content-left {
+  width: 50%;
+
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.form__radio {
+  margin-right: rem(10px);
+  display: none;
+
+  width: rem(16px);
+  height: rem(16px);
+  position: relative;
+  &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+  }
+  // &:after {
+  //   width: rem(6px);
+  //   height: rem(6px);
+  //   background: #fff;
+  // }
+  // &:before {
+  //   width: rem(0px);
+  //   height: rem(0px);
+  //   border-radius: 50%;
+  //   border: rem(1px) solid #fff;
+  //   opacity: 0;
+  //   transition: .3s;
+  // }
+}
+
+.form__paragraf {
+  color: #fff;
+  margin-top: rem(10px);
+
+  &-2 {
+    margin-top: rem(-5px);
+  }
+
+  @include phones {
+    margin-bottom: rem(10px);
+    text-align: center;
+  }
+}
+
+.form__elem {
+  @include tablets {
+    display: flex;
+    justify-content: center;
+  }
+}
+.form__buttons {
+
+  @include phones {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.form__checkbox {
+  margin-right: rem(10px);
+}
