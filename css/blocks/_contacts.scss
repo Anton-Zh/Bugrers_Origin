@@ -1,6 +1,7 @@
 .contacts__tel__box {
   display: flex;
   align-items: center;
+  
 
   @include phones {
     justify-content: center;
@@ -16,6 +17,7 @@
   &_tel {
     color: $orange;
     font-weight: 500;
+    text-decoration: none;
     @include phones {
       display: flex;
       justify-content: center;
