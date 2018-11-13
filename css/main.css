@@ -1402,6 +1402,9 @@ footer {
 .form__checkbox {
   margin-right: 0.625rem; }
 
+.form__check {
+  margin-bottom: 0.625rem; }
+
 .hamburger {
   width: 1.5625rem;
   height: 0.25rem;
