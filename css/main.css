@@ -1413,7 +1413,7 @@ footer {
   margin-bottom: 1.25rem;
   margin-top: 1.25rem;
   margin-left: 2.5rem;
-  border-radius: 0.3125rem;
+  border-radius: 0.25rem;
   display: none; }
   @media (max-width: 768px) {
     .hamburger {
@@ -1429,7 +1429,7 @@ footer {
   height: 0.25rem;
   background: #fff;
   position: absolute;
-  border-radius: 0.3125rem; }
+  border-radius: 0.25rem; }
 
 .hamburger:after {
   top: 100%;
