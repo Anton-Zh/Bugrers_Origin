@@ -6,11 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Burgers</title>
   <link rel="stylesheet" href="css/main.css">
-   
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/team.js"></script>
+
 </head>
 <body>
   <div class="wrapper">
-    <div class="maincontent">
+    <section class="maincontent">
       <section class="hero section">
         <div class="container container--without-align">
           <header class="header">
@@ -114,13 +117,88 @@
         </div>
       </section>
 
+      <section class="burger section">
+        <div class="scroll__to-next scroll__to-next-left">
+          <a href="#" class="to-next-section-left">
+            <svg alt="arrow scroll" class="to-next-section__pic to-next-section__pic-left">
+              <use xlink:href="image/sprite.svg#arrow__scroll"></use>
+            </svg> 
+          </a>
+        </div>
+        <div class="burger__container">
+          <div class="burger__desk">
+            <div class="compose">
+              <div class="burger__composition">
+                <svg alt="burger" class="burger-composition-icon">
+                  <use xlink:href="image/sprite.svg#burger-icon"></use>
+                </svg>
+                <div class="burger__composition__title">состав</div>
+                <div class="composition__list">
+                  <table class="composition__list__title">
+                    <tr><td class="ingr__icon"><svg alt="Beef" class="table__icon">
+                      <use xlink:href="image/sprite.svg#beef"></use></svg>
+                    </td><td class="ingr__title">Говядина</td><td class="ingr__weight">300 г</td></tr>
+                    <tr><td class="ingr__icon"><svg alt="Buns" class="table__icon">
+                      <use xlink:href="image/sprite.svg#buns"></use></svg>
+                    </td><td class="ingr__title">Булочки</td><td class="ingr__weight">100 г</td></tr>
+                    <tr><td class="ingr__icon"><svg alt="Salad" class="table__icon">
+                      <use xlink:href="image/sprite.svg#salad"></use></svg>
+                    </td><td class="ingr__title">Зелень</td><td class="ingr__weight">70 г</td></tr>
+                    <tr><td class="ingr__icon"><svg alt="Sauce" class="table__icon">
+                      <use xlink:href="image/sprite.svg#sauce"></use></svg>
+                    </td><td class="ingr__title">Соус</td><td class="ingr__weight">150 г</td></tr>
+                    <tr><td class="ingr__icon"><svg alt="Cucumber" class="table__icon">
+                      <use xlink:href="image/sprite.svg#cucumber"></use></svg>
+                    </td><td class="ingr__title">Овощи</td><td class="ingr__weight">200 г</td></tr>
+                    <tr><td class="ingr__icon"><svg alt="Cheese" class="table__icon">
+                      <use xlink:href="image/sprite.svg#cheese"></use></svg>
+                    </td><td class="ingr__title">Сыр</td><td class="ingr__weight">80 г</td></tr>
+                  </table>
+                </div>
+              </div>              
+            </div>
+            <img class="burger__pic" id="black" src="image/burgers-slider/black_br.png" alt="Black Burger" title="Black Burger">
+            <!-- <img class="burger__pic" id="chiken" src="image/burgers-slider/chiken_br.png" alt="Chiken Burger" title="Chiken Burger">
+            <img class="burger__pic" id="nyc" src="image/burgers-slider/nyc_diner-baco_cheeseburger.png" alt="NYC Cheeseburger" title="NYC Cheeseburger">
+            <img class="burger__pic" id="sandwith" src="image/burgers-slider/sandwich_br.png" alt="Sandwith Burger" title="Sandwith Burger">
+            <img class="burger__pic" id="sprimp" src="image/burgers-slider/spicy_shrimp_br.png" alt="Spicy Shrimp Burger" title="Spicy Shrimp Burger"> -->
+            <div class="burger__weight">
+              <svg alt="weight" class="burger-weight-icon">
+                <use xlink:href="image/sprite.svg#kkal"></use>
+              </svg>
+              <div class="burger__weight__title">1200 ККАЛ</div>
+            </div>
+          </div>
+          <div class="burger__content">
+            <div class="section-title section-title--burger">dark beef <br> burger</div>
+            <div class="burger__text">Ваш старый добрый знакомый, с рубленным бифштексом с 100% говядины, 
+              тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с 
+              добавлением экзотического соуса чураско.</div>
+            <div class="price__box">
+              <div class="section-title burger__price">500</div>
+              <div class="burger__price__text">рублей</div>
+              <div class="btn--slider">
+                <a href="" class="btn">Заказать</a> <!--по макету кнопка не ровно, почему-то, и я сделал также-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll__to-next scroll__to-next-right">
+            <a href="#" class="to-next-section-right">
+              <svg alt="arrow scroll" class="to-next-section__pic to-next-section__pic-rigth">
+                <use xlink:href="image/sprite.svg#arrow__scroll"></use>
+              </svg> 
+            </a>
+          </div>
+      </section>
+
       <section class="team section">
         <div class="team__container">
           <div class="team__content">
             <div class="section-title section-title--team">Команда</div>
             <ul class="team-list">
               <li class="team-list__item">
-                <a href="#team" class="team-list__trigger">Дэниел Редклифф</a>
+                <div class="team-list__trigger">Дэниел Редклифф</div>
                 <div class="team-list__content">
                   <div class="team-list__pic">
                     <img class="team-list__pic-img" src="image/avatar.png" alt="">
@@ -133,8 +211,8 @@
                   </div>
                 </div>
               </li>
-              <li class="team-list__item team-list__item-active">
-                <a href="#team" class="team-list__trigger">Ричард Джеймс</a>
+              <li class="team-list__item">
+                <div class="team-list__trigger">Ричард Джеймс</div>
                 <div class="team-list__content">
                   <div class="team-list__pic">
                     <img class="team-list__pic-img" src="image/avatar.png" alt="">
@@ -147,8 +225,8 @@
                   </div>
                 </div>
               </li>
-              <li class="team-list__item team-list__item-active">
-                <a href="#team" class="team-list__trigger">Джейк Финн</a>
+              <li class="team-list__item">
+                <div class="team-list__trigger">Джейк Финн</div>
                 <div class="team-list__content">
                   <div class="team-list__pic">
                     <img class="team-list__pic-img" src="image/avatar.png" alt="">
@@ -161,8 +239,8 @@
                   </div>
                 </div>
               </li>
-              <li class="team-list__item team-list__item-active">
-                <a href="#team" class="team-list__trigger">Николай Иванов</a>
+              <li class="team-list__item">
+                <div class="team-list__trigger">Николай Иванов</div>
                 <div class="team-list__content">
                   <div class="team-list__pic">
                     <img class="team-list__pic-img" src="image/avatar.png" alt="">
@@ -184,9 +262,8 @@
         <div class="menu__content">
           <div class="section-title section-title--white">Меню</div>
           <ul class="menu-list">
-            <li class="menu-list__item menu-list__item-meat menu-list__item-active">
-              <a href="#menu" class="menu-list__link"><div class="menu-list__link-title">Для мясоедов</div></a>                
-              <div class="menu-list__text-container">
+            <li class="menu-list__item menu-list__item-meat">
+              <div class="menu-list__title"><span>Для мясоедов</span></div>                
                 <div class="menu-list__text">Речевой акт редуцирует диалектический характер. 
                   Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. 
                   Лирический субъект начинает диссонансный анжамбеман. 
@@ -195,35 +272,34 @@
                   Речевой акт редуцирует диалектический характер. 
                   Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. 
                   Лирический субъект начинает диссонансный анжамбеман. 
-                  Наш современник стал особенно чутко относиться к слову.</div>
-              </div>
+                  Наш современник стал особенно чутко относиться к слову.
+                </div>
             </li>
-            <li class="menu-list__item menu-list__item-vegan menu-list__item-active">
-              <a href="#menu" class="menu-list__link"><div class="menu-list__link-title">Вегетарианское</div></a>                <div class="menu-list__text-container">
+            <li class="menu-list__item menu-list__item-vegan">
+              <div class="menu-list__title"><span>Вегетарианское</span></div>                
                 <div class="menu-list__text">Речевой акт редуцирует диалектический характер. 
-                    Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. 
-                    Лирический субъект начинает диссонансный анжамбеман. 
-                    Наш современник стал особенно чутко относиться к слову, однако механизм сочленений не устойчив. 
-                    Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. 
-                    Речевой акт редуцирует диалектический характер. 
-                    Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. 
-                    Лирический субъект начинает диссонансный анжамбеман. 
-                    Наш современник стал особенно чутко относиться к слову.</div>
-              </div>
+                  Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. 
+                  Лирический субъект начинает диссонансный анжамбеман. 
+                  Наш современник стал особенно чутко относиться к слову, однако механизм сочленений не устойчив. 
+                  Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. 
+                  Речевой акт редуцирует диалектический характер. 
+                  Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. 
+                  Лирический субъект начинает диссонансный анжамбеман. 
+                  Наш современник стал особенно чутко относиться к слову.
+                </div>
             </li>
-            <li class="menu-list__item menu-list__item-diet ">
-              <a href="#menu" class="menu-list__link"><div class="menu-list__link-title">Диетическое</div></a>
-              <div class="menu-list__text-container">
+            <li class="menu-list__item menu-list__item-diet">
+              <div class="menu-list__title"><span>Диетическое</span></div>                
                 <div class="menu-list__text">Речевой акт редуцирует диалектический характер. 
-                    Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. 
-                    Лирический субъект начинает диссонансный анжамбеман. 
-                    Наш современник стал особенно чутко относиться к слову, однако механизм сочленений не устойчив. 
-                    Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. 
-                    Речевой акт редуцирует диалектический характер. 
-                    Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. 
-                    Лирический субъект начинает диссонансный анжамбеман. 
-                    Наш современник стал особенно чутко относиться к слову.</div>
-              </div>
+                  Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. 
+                  Лирический субъект начинает диссонансный анжамбеман. 
+                  Наш современник стал особенно чутко относиться к слову, однако механизм сочленений не устойчив. 
+                  Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. 
+                  Речевой акт редуцирует диалектический характер. 
+                  Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. 
+                  Лирический субъект начинает диссонансный анжамбеман. 
+                  Наш современник стал особенно чутко относиться к слову.
+                </div>
             </li>
           </ul>
         </div>
@@ -444,7 +520,6 @@
         </footer>
         
       </section>
-
 
     </div>
     <!-- .fixed-menu -->

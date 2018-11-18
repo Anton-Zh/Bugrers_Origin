@@ -14,125 +14,93 @@
   width: 40%;
 
   @include phones {
-    width: 30%;
     font-size: rem(45px);
   }
 }
 
 .menu-list {
   display: flex;
-  width: 60%;
-
-  @include tablets {
-    width: 70%;
-  }
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
 
 .menu-list__item {
   display: flex;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: auto;
-  align-items: flex-end;
-  
-
   &-meat { 
     background-image: url(../image/backgrounds/bg_meat.png);
     right: rem(160px);
-
     @include phones {
       right: rem(120px);
     }
-
-    &:active {
-      position: inherit;
-      top: 0;
-      bottom: 0; 
-
-      .menu-list__link-title{
-        color: $yellow;
-      }
-    }
   }
-
   &-vegan {
     background-image: url(../image/backgrounds/bg_vegan.png);
     right: rem(80px);
     @include phones {
       right: rem(60px);
     }
-    &:active {
-      position: inherit;
-      top: 0;
-      bottom: 0; 
-
-      .menu-list__link-title{
-        color: $yellow;
-      }
-    }
   }
-
   &-diet {
     background-image: url(../image/backgrounds/bg_diet.png);
-    right: 0;
-
-    &:active {
-      position: inherit;
-      top: 0;
-      bottom: 0; 
-
-      .menu-list__link-title{
-        color: $yellow;
-      }
-    }
-    
+    right: 0;   
   }
-
-  &:active {
-    .menu-list__text {
-      width: rem(490px);
-      overflow: visible;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      padding: rem(60px) rem(40px);
-      background: rgba(0, 0, 0, 0.7);
-
-      @include tablets {
-        width: rem(281px);
-        font-size: rem(15px);
-      }
-
-
-    }
-  }
-  
 }
 
-.menu-list__link {
-  font-family: 'Gagalin-Regular';
+.menu-list__item_active .menu-list__title {
+  color: $yellow;
+}
+
+.menu-list__item_active .menu-list__text {
+  max-width: rem(540px);
+  padding: rem(62px) rem(35px);
+  visibility: visible;
+  opacity: 1;
+  min-height: rem(600px);
+}
+
+
+.menu-list__title {
+  position: relative;
+  width: rem(80px);
+  font-family: 'Gagalin-Regular', sans-serif;
   font-size: rem(40px);
   color: #fff;
-  text-decoration: none;
-  width: rem(80px);
-  @include phones {
-    font-size: rem(30px);
-    width: rem(60px);
-  }
+  line-height: rem(80px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
-.menu-list__link-title {
-  transform: rotate(-90deg);
+.menu-list__title span {
   white-space: nowrap;
-  margin-bottom: rem(50px);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: rotateZ(-90deg);
+  transform-origin: 0 0;
 }
+
 
 .menu-list__text {
-  width: 0;
-  overflow: hidden;
+  background-color: rgba(47, 50, 52, .929);
+  color: #fff;
+  font-size: rem(14px);
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.714;
+  max-width: rem(0px);
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
+  transition-property: max-width, opacity, visibility;
 }
 
 

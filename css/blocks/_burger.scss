@@ -1,0 +1,253 @@
+.burger {
+  background: linear-gradient(#f9b43b, #e06a33, #f9b43b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger__container {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: baseline;
+  margin-right: rem(40px);
+
+  @include tablets {
+    flex-direction: column;
+    margin-right: rem(20px);
+    height: 100%;
+    // align-items: center;
+    justify-content: initial;
+
+    text-align: center;
+    
+  }
+}
+
+.burger__desk {
+  width: 50%;
+
+  @include tablets {
+
+    width: 100%;
+  }
+}
+
+.burger__content {
+  width: 50%;
+
+  @include tablets {
+    width: 100%;
+    
+    // display: flex;
+    // flex-direction: column;
+  }
+}
+
+.scroll__to-next {
+  display: flex;
+  align-items: center;
+
+  &-right {
+    width: rem(50px);
+    height: 100%;    
+    margin-bottom: rem(0px);
+
+    @include tablets {
+    }
+  }
+  &-left {
+    width: rem(50px);
+    height: 100%;    
+    margin-right: rem(40px);
+    margin-bottom: rem(0px);
+
+    @include tablets {
+      margin-right: rem(20px);
+    }
+
+  }
+  
+}
+
+.burger__text {
+  color: #fff;
+  line-height: 1.7;
+  margin-bottom: rem(30px);
+
+  @include tablets {
+    margin-bottom: rem(0px);
+  }
+
+  @include phones {
+    line-height: 1.4;
+  }
+}
+
+.burger__composition {
+  background: $orange;
+  border-radius: rem(5px);
+  position: absolute;
+  left: 10%;
+  margin-top: rem(-50px);
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // flex-direction: column;
+  // width: 15%;
+  padding: rem(8px) rem(13px) rem(5px) rem(15px);
+
+  &:active {
+    .composition__list {
+      overflow: visible;
+      width: rem(246px);
+    }
+  }
+
+  @include tablets {
+    bottom: 73%;
+
+  }
+}
+
+.burger__composition__title {
+  color: #fff;
+  @include gagalin();
+  font-weight: normal;
+  
+}
+
+.burger__pic {
+  margin-top: rem(0px);
+
+  @include tablets {
+    width: 60%;
+  }
+
+  @include phones {
+    width: 80%;
+  }
+}
+
+.burger__weight {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 5%;
+  position: absolute;
+  left: 10%;
+  top: 34%;
+
+  &__title {
+    color: #fff;
+    opacity: 0.7;
+    @include gagalin ();
+    margin-top: rem(-36px);
+    margin-left: rem(4px);
+    font-size: rem(21px);
+    width: 81%;
+
+    @include tablets {
+      margin-left: rem(6px);
+    }
+
+    @include phones {
+      width: 126%;
+    }
+    }
+
+  @include tablets {
+    margin-top: rem(20px);
+    top: 25%;
+    left: 83%;
+    width: 7%;
+  }
+
+  @include phones {
+    margin-top: rem(28px);
+    left: 78%;
+  }
+}
+
+
+.burger__price {
+  color: $red;
+  text-align: start;
+  display: inline-flex;
+  margin-right: rem(10px);
+  margin-bottom: rem(0px);
+
+}
+
+.burger__price__text {
+  display: inline-flex;
+  color: $red;
+  @include gagalin();
+  font-size: rem(30px);
+  margin-right: rem(20px);
+
+}
+.compose {
+  display: flex;
+
+  @include tablets {
+    margin-bottom: rem(83px);
+  }
+}
+.composition__list {
+  // width: rem(270px);
+  // height: rem(332px);
+  // display: none;overflow: hidden;
+  margin-top: rem(-80px);
+  position: absolute;
+  left: 100%;
+  // width: rem(246px);
+  width: rem(0px);
+  overflow: hidden;
+
+  @include tablets {
+    margin-top: rem(-73px);
+
+  }
+  
+
+  .ingr__icon {
+    padding: rem(0px) rem(20px) rem(0px) rem(20px);
+    
+  }
+  .ingr__title {
+    text-align: left;
+    padding-right: rem(30px);
+    font-weight: bolder;
+  }
+  .ingr__weight {
+    text-align: right;
+    padding-right: rem(20px);
+
+  }
+  
+
+  table {
+    background: rgba($color: #fff, $alpha: .8);
+    position: absolute;
+    border-radius: rem(5px);
+    // padding: rem(30px);  
+    
+
+
+  }
+
+
+}
+
+.price__box {
+  display: flex;
+  justify-content: start;
+  align-items: baseline;
+
+  @include tablets {
+    justify-content: center;
+  }
+
+}

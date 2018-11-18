@@ -1,10 +1,33 @@
 .to-next-section {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-bottom: rem(20px);
+  height: 30%;
+  &-left {
+    margin-bottom: rem(0px);
+
+    @include tablets {
+    }
+  }
+
+  &-right {
+    margin-bottom: rem(0px);
+  }
 
   @include tablets {
     display: none;
   }
 }
 
+.to-next-section__pic {
+
+  &-left {
+    transform: rotate(90deg);
+  }
+
+  &-rigth {
+    transform: rotate(-90deg);
+  }
+
+}

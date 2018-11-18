@@ -60,6 +60,7 @@
   font-family: 'Gagalin-Regular';
   text-decoration: none;
   margin-bottom: rem(20px);
+  cursor: pointer;
 
   &:before {
     content: "";
@@ -92,7 +93,8 @@
 .team-list__text {
   color: #fff;
   padding-left: rem(40px);
-  
+  width: 70%;
+    
   @include tablets {
     padding-left: rem(0px);
     text-align: center;
@@ -111,7 +113,7 @@
   margin-bottom: rem(30px);
   height: auto;
  
-  &:active  {
+  &--active  {
   .team-list__trigger {
     color: $yellow;
 
