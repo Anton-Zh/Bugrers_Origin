@@ -39,3 +39,32 @@
   bottom: 100%;
   margin-bottom: rem(6px);
 }
+
+.hamburger__active {
+  position: fixed;
+  // width: 110%;
+  width: 100%;
+  height: 100%;
+  // height: 86%;
+  border: rem(1px);
+  display: none;
+  transition: opacity .3s;
+  background: rgba(78, 77, 77, 0.9);
+  text-align: center;
+  margin-top: rem(80px);
+}
+
+.hamburger__menu {
+  font-family: 'Gagalin-Regular';
+  font-size: rem(40px);
+  width: inherit;
+}
+
+.hamburger__link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.hamburger__item {
+  padding: rem(8px);
+}

@@ -48,6 +48,10 @@
   display: flex;
   align-items: center;
 
+  &--hero {
+    display: block;
+  }
+
   &-right {
     width: rem(50px);
     height: 100%;    
@@ -67,7 +71,6 @@
     }
 
   }
-  
 }
 
 .burger__text {
@@ -96,8 +99,9 @@
   // flex-direction: column;
   // width: 15%;
   padding: rem(8px) rem(13px) rem(5px) rem(15px);
+  cursor: pointer;
 
-  &:active {
+  &:hover {
     .composition__list {
       overflow: visible;
       width: rem(246px);

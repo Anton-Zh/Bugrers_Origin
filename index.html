@@ -9,6 +9,9 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/team.js"></script>
+  <script src="js/slider.js"></script>
+  <!-- <script src="js/hamburger.js"></script> -->
+  <!-- <script src="js/composition.js"></script> -->
 
 </head>
 <body>
@@ -35,10 +38,24 @@
                 </ul>
               </nav>
               <a href="" class="btn btn--red">Заказать</a>
-              <div class="hamburger"></div>
+              <div class="hamburger">
+              </div>
             </div>
           </header>
           <div class="hero__container">
+              <div class="hamburger__active"> <!--проба-->
+                <nav class="hamburger__menu"> 
+                  <ul class="hamburger__list">
+                    <li class="hamburger__item"><a href="#" class="hamburger__link">О нас</a></li>
+                    <li class="hamburger__item"><a href="#" class="hamburger__link">Бургеры</a></li>
+                    <li class="hamburger__item"><a href="#" class="hamburger__link">Команда</a></li>
+                    <li class="hamburger__item"><a href="#" class="hamburger__link">Меню</a></li>
+                    <li class="hamburger__item"><a href="#" class="hamburger__link">Отзывы</a></li>
+                    <li class="hamburger__item"><a href="#" class="hamburger__link">Как мы работаем</a></li>
+                    <li class="hamburger__item"><a href="#" class="hamburger__link">Контакты</a></li>
+                  </ul>
+                </nav>
+              </div>
             <div class="hero__content">
               <div class="hero__pic">
                 <img src="image/steam.png" alt="burger" class="hero__burger-pic">
@@ -49,7 +66,7 @@
               </div>
             </div>
           </div>
-          <div class="scroll__to-next">
+          <div class="scroll__to-next scroll__to-next--hero">
             <a href="#" class="to-next-section">
               <svg alt="arrow scroll" class="to-next-section__pic">
                 <use xlink:href="image/sprite.svg#arrow__scroll"></use>
@@ -118,12 +135,12 @@
       </section>
 
       <section class="burger section">
-        <div class="scroll__to-next scroll__to-next-left">
-          <a href="#" class="to-next-section-left">
+        <div class="scroll__to-next scroll__to-next-left" alt="" id="moveback">
+          <div class="to-next-section-left">
             <svg alt="arrow scroll" class="to-next-section__pic to-next-section__pic-left">
               <use xlink:href="image/sprite.svg#arrow__scroll"></use>
             </svg> 
-          </a>
+          </div>
         </div>
         <div class="burger__container">
           <div class="burger__desk">
@@ -157,11 +174,7 @@
                 </div>
               </div>              
             </div>
-            <img class="burger__pic" id="black" src="image/burgers-slider/black_br.png" alt="Black Burger" title="Black Burger">
-            <!-- <img class="burger__pic" id="chiken" src="image/burgers-slider/chiken_br.png" alt="Chiken Burger" title="Chiken Burger">
-            <img class="burger__pic" id="nyc" src="image/burgers-slider/nyc_diner-baco_cheeseburger.png" alt="NYC Cheeseburger" title="NYC Cheeseburger">
-            <img class="burger__pic" id="sandwith" src="image/burgers-slider/sandwich_br.png" alt="Sandwith Burger" title="Sandwith Burger">
-            <img class="burger__pic" id="sprimp" src="image/burgers-slider/spicy_shrimp_br.png" alt="Spicy Shrimp Burger" title="Spicy Shrimp Burger"> -->
+            <img src="image/burgers-slider/black_br.png" class="burger__pic" alt="Black Burger" title="Black Burger">
             <div class="burger__weight">
               <svg alt="weight" class="burger-weight-icon">
                 <use xlink:href="image/sprite.svg#kkal"></use>
@@ -183,12 +196,12 @@
             </div>
           </div>
         </div>
-        <div class="scroll__to-next scroll__to-next-right">
-            <a href="#" class="to-next-section-right">
+        <div class="scroll__to-next scroll__to-next-right" alt="" id="moveforward">
+            <div  class="to-next-section-right">
               <svg alt="arrow scroll" class="to-next-section__pic to-next-section__pic-rigth">
                 <use xlink:href="image/sprite.svg#arrow__scroll"></use>
               </svg> 
-            </a>
+            </div>
           </div>
       </section>
 
