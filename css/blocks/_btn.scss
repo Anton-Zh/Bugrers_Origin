@@ -20,6 +20,12 @@
     margin-top: rem(25px);
     align-self: center;
   }
+
+  &--red {
+    border-width: 0;
+    border-style: none;
+    cursor: pointer;
+  }
 }
 
 .mobile-menu-icon {

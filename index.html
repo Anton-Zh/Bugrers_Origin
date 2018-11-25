@@ -8,8 +8,9 @@
   <link rel="stylesheet" href="css/main.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="js/menu.js"></script>
-  <script src="js/team.js"></script>
+  <script src="js/team.js"></script> 
   <script src="js/slider.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <!-- <script src="js/hamburger.js"></script> -->
   <!-- <script src="js/composition.js"></script> -->
 
@@ -17,7 +18,7 @@
 <body>
   <div class="wrapper">
     <section class="maincontent">
-      <section class="hero section">
+      <section id="hero" class="hero section">
         <div class="container container--without-align">
           <header class="header">
             <div href="" class="logo">
@@ -37,7 +38,7 @@
                   <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
                 </ul>
               </nav>
-              <a href="" class="btn btn--red">Заказать</a>
+              <a href="#order" type="submit" class="btn btn--red">Заказать</a>
               <div class="hamburger">
               </div>
             </div>
@@ -76,7 +77,7 @@
         </div>      
       </section>
 
-      <section class="best section">
+      <section id="best" class="best section">
         <div class="container">
             <div class="best__content">
               <div class="section-title section-title--black">Мы лучшие</div>
@@ -134,7 +135,7 @@
         </div>
       </section>
 
-      <section class="burger section">
+      <section id="burgers" class="burger section">
         <div class="scroll__to-next scroll__to-next-left" alt="" id="moveback">
           <div class="to-next-section-left">
             <svg alt="arrow scroll" class="to-next-section__pic to-next-section__pic-left">
@@ -174,7 +175,9 @@
                 </div>
               </div>              
             </div>
-            <img src="image/burgers-slider/black_br.png" class="burger__pic" alt="Black Burger" title="Black Burger">
+            <div class="burger__pic__box">
+              <img src="image/burgers-slider/black_br.png" class="burger__pic" alt="Black Burger" title="Black Burger">
+            </div>
             <div class="burger__weight">
               <svg alt="weight" class="burger-weight-icon">
                 <use xlink:href="image/sprite.svg#kkal"></use>
@@ -191,7 +194,7 @@
               <div class="section-title burger__price">500</div>
               <div class="burger__price__text">рублей</div>
               <div class="btn--slider">
-                <a href="" class="btn">Заказать</a> <!--по макету кнопка не ровно, почему-то, и я сделал также-->
+                <a href="#order" type="submit" class="btn btn--order">Заказать</a> 
               </div>
             </div>
           </div>
@@ -205,7 +208,7 @@
           </div>
       </section>
 
-      <section class="team section">
+      <section id="team" class="team section">
         <div class="team__container">
           <div class="team__content">
             <div class="section-title section-title--team">Команда</div>
@@ -271,7 +274,7 @@
         </div>
       </section>
 
-      <section class="menu section">
+      <section id="menu" class="menu section">
         <div class="menu__content">
           <div class="section-title section-title--white">Меню</div>
           <ul class="menu-list">
@@ -318,7 +321,7 @@
         </div>
       </section>
 
-      <section class="reviews section">
+      <section id="reviews" class="reviews section">
         <ul class="reviews__list">
           <li class="reviews__item" style="background: url(image/review-color/photo_review1.png) center center /cover no-repeat;">
               <!--  -->
@@ -327,8 +330,8 @@
               <div class="reviews__text">
                   <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
               </div>
-              <a href="#" class="btn btn--black">Подробнее</a>
-              <a href="#" class="btn btn--black btn--black-phones">читать отзыв</a>
+              <a href="#reviews" class="btn btn--black">Подробнее</a>
+              <a href="#reviews" class="btn btn--black btn--black-phones">читать отзыв</a>
             </div>
           </li>
           <li class="reviews__item" style="background: url(image/review-color/photo_review2.png) center center /cover no-repeat;">
@@ -337,8 +340,8 @@
               <div class="reviews__text">
                   <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                 </div>
-                <a href="#" class="btn btn--black">Подробнее</a>
-                <a href="#" class="btn btn--black btn--black-phones">читать отзыв</a>
+                <a href="#reviews" class="btn btn--black">Подробнее</a>
+                <a href="#reviews" class="btn btn--black btn--black-phones">читать отзыв</a>
             </div>
           </li>
           <li class="reviews__item" style="background: url(image/review-color/photo_review3.png) center center /cover no-repeat;">
@@ -347,8 +350,8 @@
               <div class="reviews__text">
                   <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                 </div>
-                <a href="#" class="btn btn--black">Подробнее</a>
-                <a href="#" class="btn btn--black btn--black-phones">читать отзыв</a>
+                <a href="#reviews" class="btn btn--black">Подробнее</a>
+                <a href="#reviews" class="btn btn--black btn--black-phones">читать отзыв</a>
             </div>
           </li>
           <li class="reviews__item" style="background: url(image/review-color/photo_review4.png) center center /cover no-repeat;">
@@ -357,8 +360,8 @@
               <div class="reviews__text">
                   <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                 </div>
-                <a href="#" class="btn btn--black">Подробнее</a>
-                <a href="#" class="btn btn--black btn--black-phones">читать отзыв</a>
+                <a href="#reviews" class="btn btn--black">Подробнее</a>
+                <a href="#reviews" class="btn btn--black btn--black-phones">читать отзыв</a>
             </div>
           </li>
           <li class="reviews__item" style="background: url(image/review-color/photo_review5.png) center center /cover no-repeat;">
@@ -367,8 +370,8 @@
               <div class="reviews__text">
                   <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                 </div>
-                <a href="#" class="btn btn--black">Подробнее</a>
-                <a href="#" class="btn btn--black btn--black-phones">читать отзыв</a>
+                <a href="#reviews" class="btn btn--black">Подробнее</a>
+                <a href="#reviews" class="btn btn--black btn--black-phones">читать отзыв</a>
             </div>
           </li>
           <li class="reviews__item" style="background: url(image/review-color/photo_review6.png) center center /cover no-repeat;">
@@ -377,8 +380,8 @@
               <div class="reviews__text">
                   <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                 </div>
-                <a href="#" class="btn btn--black">Подробнее</a>
-                <a href="#" class="btn btn--black btn--black-phones">читать отзыв</a>
+                <a href="#reviews" class="btn btn--black">Подробнее</a>
+                <a href="#reviews" class="btn btn--black btn--black-phones">читать отзыв</a>
             </div>
           </li>
           <li class="reviews__item" style="background: url(image/review-color/photo_review7.png) center center /cover no-repeat;">
@@ -387,8 +390,8 @@
               <div class="reviews__text">
                   <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                 </div>
-                <a href="#" class="btn btn--black">Подробнее</a>
-                <a href="#" class="btn btn--black btn--black-phones">читать отзыв</a>
+                <a href="#reviews" class="btn btn--black">Подробнее</a>
+                <a href="#reviews" class="btn btn--black btn--black-phones">читать отзыв</a>
             </div>
           </li>
           <li class="reviews__item" style="background: url(image/review-color/photo_review8.png) center center /cover no-repeat;">
@@ -397,58 +400,58 @@
               <div class="reviews__text">
                   <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                 </div>
-                <a href="#" class="btn btn--black">Подробнее</a>
-                <a href="#" class="btn btn--black btn--black-phones">читать отзыв</a>
+                <a href="#reviews" class="btn btn--black">Подробнее</a>
+                <a href="#reviews" class="btn btn--black btn--black-phones">читать отзыв</a>
             </div>
           </li>
         </ul>
       </section>
 
-      <!-- <section class="vedio section">
+      <!-- <section id="video" class="vedio section">
         <div class="video__container">
           <div class="video__content"></div>
         </div>
       </section> -->
 
-      <section class="order section section_centered">
+      <section id="order" class="order section section_centered">
         <div class="container">
           <div class="section-title section-title--order">Закажите доставку</div>
           <div class="form">
-            <form action="#" class="form__elem">
+            <form metod="" action="" class="form__elem" id="myForm">
               <div class="form__content">
                 <div class="form__content-left">
                   <div class="form__row">
                     <label class="form__block">
                       <div class="form__block-title">Имя</div>
-                      <input type="text" class="form__input">
+                      <input name="name" type="text" class="form__input" required>
                     </label>
                     <label class="form__block">
                       <div class="form__block-title">Телефон</div>
-                      <input type="text" class="form__input">
+                      <input name="phone" type="tel" class="form__input" required>
                     </label>
                   </div>
                   <div class="form__row">
                     <label class="form__block">
                       <div class="form__block-title">Улица</div>
-                      <input type="text" class="form__input">
+                      <input name="street" type="text" class="form__input" required>
                     </label>
                   </div>
                   <div class="form__row">
                     <label class="form__block">
                       <div class="form__block-title">Дом</div>
-                      <input type="text" class="form__input">
+                      <input name="house" type="te" class="form__input" required>
                     </label>
                     <label class="form__block">
                       <div class="form__block-title">Корпус</div>
-                      <input type="text" class="form__input">
+                      <input name="housing" type="text" class="form__input">
                     </label>
                     <label class="form__block">
                       <div class="form__block-title">Квартира</div>
-                      <input type="text" class="form__input">
+                      <input name="flat" type="text" class="form__input" required>
                     </label>
                     <label class="form__block form__block--floor">
                       <div class="form__block-title form__block-title">Этаж</div>
-                      <input type="text" class="form__input">
+                      <input name="floor" type="text" class="form__input" required>
                     </label>
                   </div>
                 </div>
@@ -459,22 +462,22 @@
                   </div>
                   <div class="radio__buttons">
                     <label class="radio__buttons__label">
-                        <input name="show" class="radio__mark" type="radio">
+                        <input name="pay" class="radio__mark" type="radio">
                         <span class="radio__mark-fake"></span>
                         <span class="radio__mark-text">Потребуется сдача</span>
                     </label>
                     <label class="radio__buttons__label">
-                        <input name="show" class="radio__mark" type="radio" checked="">
+                        <input name="pay" class="radio__mark" type="radio" checked="">
                         <span class="radio__mark-fake"></span>
                         <span class="radio__mark-text">Оплата по карте</span>
                     </label>
                 </div>
                   <div class="form__check">
                     <p class="form__paragraf form__paragraf-2">
-                    <input type="checkbox" class="form__check__box" checked>Не перезванивать</p>
+                    <input name="call" type="checkbox" class="form__check__box" checked>Не перезванивать</p>
                   </div>
                   <div class="form__buttons">
-                    <a href="#" class="btn btn--red">Заказать</a>
+                    <button id="sendButton" class="btn btn--red" type="submit">Заказать</button>
                     <button type="reset" class="btn btn--order">Очистить</button>
                   </div>
                 </div>
@@ -484,7 +487,7 @@
         </div>
       </section>
 
-      <section class="map section">
+      <section id="map" class="map section">
         <div class="map_container"></div>
         <footer class="footer">
           <div class="container">
@@ -567,6 +570,24 @@
         </li>
       </ul>
     </div>
-  </div> 
+
+    
+
+    <!-- templates  -->
+    <script type="template" id="reviewTemplate">
+      <div class="overlay__wrap">
+        <div class="overlay__block">
+          <h3 class="overlay__name"></h3>
+          <div class="overlay__text"><p></p></div>
+          <a href="" class="btn--close overlay__close">
+          </a>
+        </div>
+      </div>
+    </script>
+    <!-- end templates  -->
+  
+  <!-- <script-- src="js/validation.js"></script-->
+  <script src="js/overlay.js"></script>
+  <script src="js/form1.js"></script>
 </body>
 </html>

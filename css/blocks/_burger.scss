@@ -1,5 +1,5 @@
 .burger {
-  background: linear-gradient(#f9b43b, #e06a33, #f9b43b);
+  background: linear-gradient(#f8b13a, #eb8d38, #f8b13a); 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,9 +18,10 @@
     height: 100%;
     // align-items: center;
     justify-content: initial;
-
     text-align: center;
-    
+  }
+  @include phones {
+    margin-right: rem(0px);
   }
 }
 
@@ -38,9 +39,6 @@
 
   @include tablets {
     width: 100%;
-    
-    // display: flex;
-    // flex-direction: column;
   }
 }
 
@@ -57,7 +55,8 @@
     height: 100%;    
     margin-bottom: rem(0px);
 
-    @include tablets {
+    @include phones {
+      justify-content: flex-end;
     }
   }
   &-left {
@@ -69,7 +68,9 @@
     @include tablets {
       margin-right: rem(20px);
     }
-
+    @include phones {
+      margin-right: rem(0px);
+    }
   }
 }
 
@@ -88,7 +89,7 @@
 }
 
 .burger__composition {
-  background: $orange;
+  background: #ee8131;
   border-radius: rem(5px);
   position: absolute;
   left: 10%;
@@ -102,6 +103,8 @@
   cursor: pointer;
 
   &:hover {
+    background: $orange;
+    
     .composition__list {
       overflow: visible;
       width: rem(246px);
@@ -121,8 +124,20 @@
   
 }
 
+.burger__pic__box {
+  display: flex;
+  width: rem(505px);
+  height: rem(329px);
+  justify-content: center;
+  align-items: center;
+}
+
 .burger__pic {
   margin-top: rem(0px);
+  max-width: rem(505px);
+  max-height: rem(329px);
+  
+  
 
   @include tablets {
     width: 60%;
@@ -157,7 +172,7 @@
     }
 
     @include phones {
-      width: 126%;
+      width: 180%;
     }
     }
 
@@ -170,7 +185,7 @@
 
   @include phones {
     margin-top: rem(28px);
-    left: 78%;
+    left: 74%;
   }
 }
 

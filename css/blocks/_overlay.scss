@@ -1,0 +1,66 @@
+.overlay__wrap {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  // bottom:-1700px;
+  background-color:#fff;
+  background-color:rgba(31, 33, 34, 0.8)
+ }
+
+ .overlay__block {
+  position:relative;
+  width:40%;
+  background-color:#ffffff;
+  border-radius:5px;
+  padding:1.875rem 1.25rem
+ }
+
+
+ .overlay__name {
+  display:block;
+  font-family:"Gagalin-Regular";
+  line-height:1.75rem;
+  margin-bottom:1.875rem
+ }
+
+ .overlay__text {
+  font-family:"Ubuntu", Arial, sans-serif;
+  line-height:1.5rem
+ }
+
+ .overlay__close {
+  position:absolute;
+  top:1.25rem;
+  right:1.25rem
+ }
+
+ .btn--close {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  height:20px;
+  width:20px
+ }
+ .btn--close:after,.btn--close:before, {
+  content:"";
+  display:block;
+  width:100%;
+  background-color:#e45028;
+  border:2px solid #e45028;
+  border-radius:3px;
+  transition:all .2s
+ }
+ .btn--close:before {
+  margin-bottom:0px;
+  transform:translatey(4px) rotate(45deg)
+ }
+ .btn--close:after {
+  margin-top:0;
+  transform:rotate(-45deg)
+ }
