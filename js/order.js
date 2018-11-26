@@ -113,7 +113,8 @@ function createResponse(text) {
 
   const closeElement = overlayElement.querySelector(".overlay__close--response");
   closeElement.addEventListener("click", function () {
-    orderSection.removeChild(overlayElement);
+    
+       orderSection.removeChild(overlayElement);
   });
 
   const wrapElement = overlayElement.querySelector(".overlay__wrap");

@@ -47,6 +47,11 @@
   align-items:center;
   height:rem(20px);
   width:rem(20px);
+  border-width: rem(0px);
+  border-style: solid;
+  padding-left: rem(0px);
+  padding-right: rem(0px);
+  background: transparent;
  }
  .btn--close:after,.btn--close:before, {
   content:"";

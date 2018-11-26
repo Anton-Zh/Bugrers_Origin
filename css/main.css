@@ -1901,7 +1901,12 @@ footer {
   -ms-flex-align: center;
   align-items: center;
   height: 1.25rem;
-  width: 1.25rem; }
+  width: 1.25rem;
+  border-width: 0rem;
+  border-style: solid;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  background: transparent; }
 
 .btn--close:after, .btn--close:before {
   content: "";

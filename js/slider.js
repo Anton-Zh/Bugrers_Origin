@@ -2,11 +2,11 @@ $().ready(function(){
 
   let currentSlide = 0;
 
-  let arrayImgList = ['image/burgers-slider/black_br.png', 
-  'image/burgers-slider/chiken_br.png', 
-  'image/burgers-slider/nyc_diner-baco_cheeseburger.png', 
-  'image/burgers-slider/sandwich_br.png', 
-  'image/burgers-slider/spicy_shrimp_br.png']
+  let arrayImgList = ["image/burgers-slider/black_br.png", 
+  "image/burgers-slider/chiken_br.png", 
+  "image/burgers-slider/nyc_diner-baco_cheeseburger.png", 
+  "image/burgers-slider/spicy_shrimp_br.png",
+  "image/burgers-slider/sandwich_br.png"]
 
   let odjectlist = [
     {
