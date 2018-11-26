@@ -416,49 +416,52 @@
       <section id="order" class="order section section_centered">
         <div class="container">
           <div class="section-title section-title--order">Закажите доставку</div>
-          <div class="form">
-            <form metod="" action="" class="form__elem" id="myForm">
+          <div class="Boxform">
+            <form class="form" method="POST" autocomplete>
               <div class="form__content">
                 <div class="form__content-left">
                   <div class="form__row">
                     <label class="form__block">
                       <div class="form__block-title">Имя</div>
-                      <input name="name" type="text" class="form__input" required>
+                      <input name="name" type="text" class="form__input" tabindex="1" required>
+                      <div class="form__error"></div>
                     </label>
                     <label class="form__block">
                       <div class="form__block-title">Телефон</div>
-                      <input name="phone" type="tel" class="form__input" required>
+                      <input name="phone" type="tel" class="form__input" placeholder="+79-- --- ----" tabindex="2" maxlength="14" required>
+                      <div class="form__error"></div>
                     </label>
                   </div>
                   <div class="form__row">
                     <label class="form__block">
                       <div class="form__block-title">Улица</div>
-                      <input name="street" type="text" class="form__input" required>
+                      <input name="street" type="text" class="form__input" tabindex="3" required>
                     </label>
                   </div>
                   <div class="form__row">
                     <label class="form__block">
                       <div class="form__block-title">Дом</div>
-                      <input name="house" type="te" class="form__input" required>
+                      <input name="house" type="te" class="form__input" tabindex="4" required>
                     </label>
                     <label class="form__block">
                       <div class="form__block-title">Корпус</div>
-                      <input name="housing" type="text" class="form__input">
+                      <input name="housing" type="text" class="form__input" tabindex="5">
                     </label>
                     <label class="form__block">
                       <div class="form__block-title">Квартира</div>
-                      <input name="flat" type="text" class="form__input" required>
+                      <input name="flat" type="text" class="form__input" tabindex="6" required>
                     </label>
                     <label class="form__block form__block--floor">
                       <div class="form__block-title form__block-title">Этаж</div>
-                      <input name="floor" type="text" class="form__input" required>
+                      <input name="floor" type="text" class="form__input" tabindex="7" required>
                     </label>
                   </div>
                 </div>
                 <div class="form__content-rigth">
                   <div class="form__comment">
                     <div class="form__block-title">Комментарий</div>
-                    <textarea name="comment" type="text" class="form__input form__input-area"></textarea>
+                    <textarea name="comment" type="text" class="form__input form__input-area" tabindex="8" required></textarea>
+                    <div class="form__error"></div>
                   </div>
                   <div class="radio__buttons">
                     <label class="radio__buttons__label">
@@ -474,10 +477,10 @@
                 </div>
                   <div class="form__check">
                     <p class="form__paragraf form__paragraf-2">
-                    <input name="call" type="checkbox" class="form__check__box" checked>Не перезванивать</p>
+                    <input name="recall" type="checkbox" class="form__check__box" checked>Не перезванивать</p>
                   </div>
                   <div class="form__buttons">
-                    <button id="sendButton" class="btn btn--red" type="submit">Заказать</button>
+                    <button id="sendBtn" class="btn btn--red" type="submit">Заказать</button>
                     <button type="reset" class="btn btn--order">Очистить</button>
                   </div>
                 </div>
@@ -584,10 +587,21 @@
         </div>
       </div>
     </script>
+    <script type="template" id="responseTemplate">
+    <div class="overlay__wrap">
+      <div class="overlay__block overlay__response">
+        <span class="overlay__message"></span>
+        <button class="btn btn--red overlay__close--response">
+          Закрыть
+        </button>
+      </div>
+    </div>
+  </script>
     <!-- end templates  -->
   
   <!-- <script-- src="js/validation.js"></script-->
   <script src="js/overlay.js"></script>
   <script src="js/form1.js"></script>
+  <script src="js/order.js"></script>
 </body>
 </html>

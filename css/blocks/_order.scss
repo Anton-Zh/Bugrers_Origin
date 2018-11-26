@@ -140,3 +140,15 @@
 .form__check {
   margin-bottom: rem(20px);
 }
+
+.form__error {
+  position:absolute;
+  // top:103%;
+  opacity:0;
+  color:#e45028;
+  font-size:.8rem;
+  transition:opacity .2s;
+ }
+ .form__error--active {
+  opacity:1;
+ }
