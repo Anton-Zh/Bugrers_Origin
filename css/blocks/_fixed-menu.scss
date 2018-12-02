@@ -47,6 +47,8 @@
 }
 
 .fixed-menu__item {
+    margin-bottom: rem(6px);
+
   &.active {
       .fixed-menu__link {
           &:before {
@@ -56,8 +58,7 @@
           }
       }
   }
-}
-
-.fixed-menu__item {
-  margin-bottom: rem(6px);
+  &-active {
+      color: #fff;
+  }
 }

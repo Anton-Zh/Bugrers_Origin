@@ -130,6 +130,7 @@
   height: rem(329px);
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .burger__pic {
@@ -140,11 +141,11 @@
   
 
   @include tablets {
-    width: 60%;
+    width: 100%;
   }
 
   @include phones {
-    width: 80%;
+    width: 100%;
   }
 }
 

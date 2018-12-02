@@ -1,4 +1,5 @@
-.hamburger {
+.burger-btn {
+  display: none;
   width: rem(25px);
   height: rem(4px);
   background: #fff;
@@ -7,7 +8,8 @@
   margin-top: rem(20px);
   margin-left: rem(40px);
   border-radius: rem(4px);
-  display: none;
+  cursor: pointer;
+  z-index: 2;
 
   @include tablets {
     display: block;
@@ -19,7 +21,7 @@
   }
 }
 
-.hamburger:after, .hamburger:before {
+.burger-btn:after, .burger-btn:before {
   content: "";
   display: block;
   width: rem(25px);
@@ -30,17 +32,17 @@
 
 }
 
-.hamburger:after,  {
+.burger-btn:after,  {
   top: 100%;
   margin-top: rem(6px);
 }
 
-.hamburger:before {
+.burger-btn:before {
   bottom: 100%;
   margin-bottom: rem(6px);
 }
 
-.hamburger__active {
+.burger__active {
   position: fixed;
   // width: 110%;
   width: 100%;

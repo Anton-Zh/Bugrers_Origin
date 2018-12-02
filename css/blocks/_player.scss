@@ -1,0 +1,29 @@
+.player__start {
+  width: 0;
+  height: 0;
+  border: rem(11px) solid transparent;
+  border-left-color: #626262;
+  padding: 0;
+  border-right-width: 0;
+  background: transparent;
+  position: absolute;
+  top: rem(5px);
+  left: rem(20px);
+  outline: none;
+
+  &.paused {
+    width: rem(14px);
+    height: rem(22px);
+    border: none;
+  }
+}
+
+.player__playback {
+  position: absolute;
+  height: rem(4px);
+  width: rem(446px);
+  background: #626262;
+  top: rem(15px);
+  left: rem(50px);
+  padding: rem(10px) rem(0px);
+}

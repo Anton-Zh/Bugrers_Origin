@@ -13,7 +13,8 @@
  }
 
  .overlay__block {
-  position: absolute;;
+  position: relative;
+  top: 0;
   width:40%;
   background-color:#ffffff;
   border-radius:rem(5px);
@@ -41,8 +42,8 @@
  }
 
  .btn--close {
-  display:flex;
-  flex-direction:column;
+  // display:flex;
+  // flex-direction:column;
   justify-content:center;
   align-items:center;
   height:rem(20px);

@@ -6,19 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Burgers</title>
   <link rel="stylesheet" href="css/main.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="js/menu.js"></script>
-  <script src="js/team.js"></script> 
-  <script src="js/slider.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <!-- <script src="js/hamburger.js"></script> -->
-  <!-- <script src="js/composition.js"></script> -->
-
 </head>
 <body>
   <div class="wrapper">
-    <section class="maincontent">
-      <section id="hero" class="hero section">
+    <div class="maincontent">
+      <section id="hero" class="hero section active">
         <div class="container container--without-align">
           <header class="header">
             <div href="" class="logo">
@@ -27,24 +19,25 @@
               </svg>
             </div>
             <div class="header__btns">
-              <nav class="nav">
-                <ul class="nav__list">
-                  <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Бургеры</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Команда</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Меню</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Как мы работаем</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+              <nav id="nav" class="nav">
+                <ul id="nav__list" class="nav__list">
+                  <li class="nav__item"><a href="#hero" class="nav__link">О нас</a></li>
+                  <li class="nav__item"><a href="#burgers" class="nav__link">Бургеры</a></li>
+                  <li class="nav__item"><a href="#team" class="nav__link">Команда</a></li>
+                  <li class="nav__item"><a href="#menu" class="nav__link">Меню</a></li>
+                  <li class="nav__item"><a href="#reviews" class="nav__link">Отзывы</a></li>
+                  <li class="nav__item"><a href="#video" class="nav__link">Как мы работаем</a></li>
+                  <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
                 </ul>
               </nav>
-              <a href="#order" type="submit" class="btn btn--red">Заказать</a>
-              <div class="hamburger">
+              <button href="#order" type="submit" class="btn btn--red">Заказать</button>
+              <div class="burger-btn" id="burger-btn">
+                  <span></span>
               </div>
             </div>
           </header>
           <div class="hero__container">
-              <div class="hamburger__active"> <!--проба-->
+              <!-- <div class="hamburger__active"> 
                 <nav class="hamburger__menu"> 
                   <ul class="hamburger__list">
                     <li class="hamburger__item"><a href="#" class="hamburger__link">О нас</a></li>
@@ -56,7 +49,7 @@
                     <li class="hamburger__item"><a href="#" class="hamburger__link">Контакты</a></li>
                   </ul>
                 </nav>
-              </div>
+              </div> -->
             <div class="hero__content">
               <div class="hero__pic">
                 <img src="image/steam.png" alt="burger" class="hero__burger-pic">
@@ -194,7 +187,7 @@
               <div class="section-title burger__price">500</div>
               <div class="burger__price__text">рублей</div>
               <div class="btn--slider">
-                <a href="#order" type="submit" class="btn">Заказать</a> 
+                <button href="#order" type="submit" class="btn btn--red">Заказать</butto> 
               </div>
             </div>
           </div>
@@ -407,11 +400,28 @@
         </ul>
       </section>
 
-      <!-- <section id="video" class="vedio section">
-        <div class="video__container">
-          <div class="video__content"></div>
+      <section id="video" class="video section">
+        <div class="container">
+          <div class="section-title section-title--black">как мы работаем</div>
+          <!-- <div id="yt-player"></div> -->
+          <div class="player hidden">
+            <div class="player__wrapper">
+              <div class="yt-player"></div>
+              <div class="player__splash"></div>
+            </div>
+            <div class="player__controls">
+              <button class="player__start"></button>
+              <div class="player__playback">
+                <button class="player__playback-button"></button>
+              </div>
+              <div class="player__duration">
+                <span class="player__duration-complited">0:00</span> :
+                <span class="player__duration-estimate">0:00</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </section> -->
+      </section>
 
       <section id="order" class="order section section_centered">
         <div class="container">
@@ -491,7 +501,7 @@
       </section>
 
       <section id="map" class="map section">
-        <div class="map_container"></div>
+        <div class="map__container"></div>
         <footer class="footer">
           <div class="container">
             <div class="footer__content">
@@ -544,37 +554,18 @@
     <!-- .fixed-menu -->
     <div class="fixed-menu-aside">
       <ul class="fixed-menu">
-        <li class="fixed-menu__item" point="hero">
-            <a class="fixed-menu__link" href="#hero"></a>
-        </li>
-        <li class="fixed-menu__item" point="best">
-            <a class="fixed-menu__link" href="#best"></a>
-        </li>
-        <li class="fixed-menu__item" point="burgers">
-            <a class="fixed-menu__link" href="#burgers"></a>
-        </li>
-        <li class="fixed-menu__item" point="team">
-            <a class="fixed-menu__link" href="#team"></a>
-        </li>
-        <li class="fixed-menu__item" point="menu">
-            <a class="fixed-menu__link" href="#menu"></a>
-        </li>
-        <li class="fixed-menu__item" point="reviews">
-            <a class="fixed-menu__link" href="#reviews"></a>
-        </li>
-        <li class="fixed-menu__item" point="video">
-            <a class="fixed-menu__link" href="#video"></a>
-        </li>
-        <li class="fixed-menu__item" point="order">
-            <a class="fixed-menu__link" href="#order"></a>
-        </li>
-        <li class="fixed-menu__item" point="map">
-            <a class="fixed-menu__link" href="#map"></a>
-        </li>
+        <!-- <li class="fixed-menu__item active" point="hero"><a class="fixed-menu__link" href="#"></a></li>
+        <li class="fixed-menu__item" point="hero"><a class="fixed-menu__link" href="#"></a></li>
+        <li class="fixed-menu__item" point="best"><a class="fixed-menu__link" href="#"></a></li>
+        <li class="fixed-menu__item" point="burgers"><a class="fixed-menu__link" href="#"></a></li>
+        <li class="fixed-menu__item" point="team"><a class="fixed-menu__link" href="#"></a></li>
+        <li class="fixed-menu__item" point="menu"><a class="fixed-menu__link" href="#"></a></li>
+        <li class="fixed-menu__item" point="reviews"><a class="fixed-menu__link" href="#"></a></li>
+        <li class="fixed-menu__item" point="video"><a class="fixed-menu__link" href="#"></a></li>
+        <li class="fixed-menu__item" point="order"><a class="fixed-menu__link" href="#"></a></li>
+        <li class="fixed-menu__item" point="map"><a class="fixed-menu__link" href="#"></a></li> -->
       </ul>
-    </div>
-
-    
+    </div>    
 
     <!-- templates  -->
     <script type="template" id="reviewTemplate">
@@ -597,11 +588,27 @@
       </div>
     </div>
   </script>
-    <!-- end templates  -->
-  
-  <!-- <script-- src="js/validation.js"></script-->
+  <!-- end templates  -->
+  <!-- jquery-->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/iquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
+
+  <!--scripts-->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=<c71c6db4-43f2-4989-b508-477717514549>&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=c71c6db4-43f2-4989-b508-477717514549&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="js/overlay.js"></script>
-  <script src="js/form1.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/team.js"></script> 
+  <script src="js/slider.js"></script>
   <script src="js/order.js"></script>
+  <script src="js/map.js"></script>
+  <!-- <script src="js/onepagescroll.js"></script> -->
+  <script src="js/onepagescroll1.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/hamburger.js"></script>
+  <!-- <script-- src="js/validation.js"></script-->
 </body>
 </html>
