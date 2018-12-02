@@ -2,3 +2,42 @@
   background: url(../image/backgrounds/bg_video.png) center center / cover no-repeat;
   position: relative;
 }
+
+.video__container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.video__player {
+  position: relative;
+  max-width: rem(660px);
+  /* max-height: 365px; */
+}
+
+.video__player-img {
+  position: absolute;
+  left: 307px;
+  top: 149px;
+  cursor: pointer;
+}
+.video__player-img--active{
+  opacity:0;
+}
+
+#player {
+  min-width: rem(660px);
+  max-width: 660px;
+  min-height: 370px;
+  max-height: 370px;
+}
+
+.video__toolbar {
+  width: 660px;
+  height: 30px;
+  background-color: #3e3e3e;
+  margin-top: -6px;
+  display: flex;
+}

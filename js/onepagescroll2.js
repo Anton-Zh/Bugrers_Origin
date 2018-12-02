@@ -20,7 +20,7 @@ $(function () {
   generateDots();
 
   // dots click
-  $('body').on('click', '.fixed-menu__item', function () {
+  $('wrapper').on('click', '.fixed-menu__item', function () {
     var $this = $(this),
       container = $this.closest('.maincontent'),
       index = $this.index();
@@ -28,7 +28,6 @@ $(function () {
     moveSection(container, index);
     activateDot(index);
   })
-
 
 
   // activate dot 
@@ -49,13 +48,13 @@ $(function () {
       items = $('.section', container),
       activeItem = items.filter('.active'),
       nextItem = activeItem.next();
-    console.log('tap')
+
     moveSection(container, nextItem.index());
   });
 
   // mousewheel action
   $('.maincontent').on('mousewheel DOMMouseScroll', function (e) {
-    var deltaY = e.originalEvent.wheelDelta,
+    let deltaY = e.originalEvent.wheelDelta,
       mozDeltaY = e.originalEvent.detail,
       $this = $(this),
       container = $this.closest('.maincontent'),
@@ -63,72 +62,94 @@ $(function () {
       activeItem = items.filter('.active'),
       nextItem = activeItem.next(),
       prevItem = activeItem.prev(),
-      existedItem, edgeItem, reqItem;
+      existedItem, reqItem;
 
     if (deltaY < 0 || mozDeltaY > 0) { // scroll down
-      existedItem = activeItem.next(),
-        edgeItem = items.first();
+      existedItem = nextItem;
     };
 
     if (deltaY > 0 || mozDeltaY < 0) { //scroll up
-      existedItem = activeItem.prev(),
-        edgeItem = items.last();
+      existedItem = prevItem;
     };
 
-    reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
-
-    moveSection(container, reqItem);
+    reqItem = existedItem.length ? existedItem.index() : items.first();
+    moveSection(reqItem);
   });
 
-  
 
-  //touch slide
-  $(".maincontent").swipe({
-    //Single swipe handler for left swipes
-    swipeUp: function (event, direction, distance, duration, fingerCount) {
-      var $this = $(this),
-      container = $this.closest('.maincontent'),
-      items = $('.section', container),
-      activeItem = items.filter('.active'),
-      existedItem, edgeItem, reqItem;
-      existedItem = activeItem.next(),
-        edgeItem = items.first(),
-        reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
+  //swipe action
+  $(function () {
+    // Enable swiping...
+    $(".section").swipe({
+      swipeStatus: function (event, phase, direction, distance) {
+        if (phase == "end") {
+          var items = $('.section'),
+            activeItem = items.filter('.active'),
+            nextItem = activeItem.next(),
+            prevItem = activeItem.prev(),
+            existedItem, reqItem;
 
-        moveSection(container, reqItem);
-    },
-    swipeDown: function (event, direction, distance, duration, fingerCount) {
-      var $this = $(this),
-      container = $this.closest('.maincontent'),
-      items = $('.section', container),
-      activeItem = items.filter('.active'),
-      existedItem, edgeItem, reqItem;
-      existedItem = activeItem.prev(),
-        edgeItem = items.last();
-        reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
+          if (direction == 'up') { // swipe up
+            existedItem = nextItem;
+          }
 
-        moveSection(container, reqItem);
-    },
-    threshold: 75
+          if (direction == 'down') { // swipe down
+            existedItem = prevItem;
+          }
+
+          reqItem = existedItem.length ? existedItem.index() : items.first();
+          moveSection(reqItem);
+        };
+      },
+      triggerOnTouchEnd: false,
+      threshold: 100
+    });
   });
+
+  // key action
+
+  $(document).on('keydown', e => {
+    let items = $('.section'),
+      activeItem = items.filter('.active'),
+      nextItem = activeItem.next(),
+      prevItem = activeItem.prev(),
+      existedItem, reqItem;
+
+    switch (e.keyCode) {
+      case 40:
+        // function action
+        existedItem = nextItem;
+        break;
+
+      case 38:
+        // function action
+        existedItem = prevItem;
+        break;
+    };
+
+    reqItem = existedItem.length ? existedItem.index() : items.first();
+    moveSection(reqItem);
+  })
 
   // quick clicks protection
-
   var flag = true;
 
   var changeFlag = function () {
+    const mouseInertionIsFinished = 400,
+      animationDuration = 700;
+
     setTimeout(function () {
       flag = true;
-    }, 500);
+    }, animationDuration + mouseInertionIsFinished);
   }
 
 
-  var moveSection = function (container, sectionNum) {
+  var moveSection = function (sectionNum) {
     const items = list.find('.section'),
       activeSection = items.filter('.active'),
       reqItem = items.eq(sectionNum),
       reqIndex = reqItem.index(),
-      duration = 500;
+      duration = 700;
 
     if (flag) {
 
@@ -147,24 +168,4 @@ $(function () {
       changeFlag();
     }
   }
-
-  // $(document).on('keydown', e => {
-  //   let items = $('.section'),
-  //     activeItem = items.filter('.active'),
-  //     nextItem = activeItem.next(),
-  //     prevItem = activeItem.prev(),
-  //     existedItem, reqItem;
-
-  //   switch (e.keyCode) {
-  //     case 40:
-  //       // function action
-  //       existedItem = nextItem;
-  //       break;
-
-  //     case 38:
-  //       // function action
-  //       existedItem = prevItem;
-  //       break;
-  //   }; 
-
 });

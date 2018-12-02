@@ -9,15 +9,15 @@
   display: flex;
   width: 80%;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   margin-right: rem(40px);
 
   @include tablets {
     flex-direction: column;
     margin-right: rem(20px);
     height: 100%;
-    // align-items: center;
-    justify-content: initial;
+    align-items: center;
+    justify-content: center;
     text-align: center;
   }
   @include phones {
@@ -85,6 +85,7 @@
 
   @include phones {
     line-height: 1.4;
+    font-size: rem(16px);
   }
 }
 
@@ -112,7 +113,7 @@
   }
 
   @include tablets {
-    bottom: 73%;
+    top: 13%;
 
   }
 }
@@ -154,32 +155,33 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  width: 5%;
+  width: 6%;
   position: absolute;
   left: 10%;
-  top: 34%;
+  top: 74%;
 
   &__title {
     color: #fff;
     opacity: 0.7;
     @include gagalin ();
     margin-top: rem(-36px);
-    margin-left: rem(4px);
+    margin-left: rem(0px);
     font-size: rem(21px);
-    width: 81%;
+    width: 80%;
 
     @include tablets {
       margin-left: rem(6px);
+      
     }
 
     @include phones {
-      width: 180%;
+      width: 123%;
     }
     }
 
   @include tablets {
     margin-top: rem(20px);
-    top: 25%;
+    top: 4%;
     left: 83%;
     width: 7%;
   }
@@ -187,6 +189,7 @@
   @include phones {
     margin-top: rem(28px);
     left: 74%;
+    top: rem(18px);
   }
 }
 
@@ -213,6 +216,9 @@
 
   @include tablets {
     margin-bottom: rem(83px);
+  }
+  @include phones {
+    margin-bottom: rem(13px);
   }
 }
 .composition__list {

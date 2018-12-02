@@ -20,6 +20,13 @@
   border-radius:rem(5px);
   padding:1.875rem 1.25rem;
   bottom: rem(1500px);
+
+  @include tablets {
+    width: 60%;
+  }
+  @include phones {
+    width: 90%;
+  }
  }
 
 

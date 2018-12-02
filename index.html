@@ -402,9 +402,30 @@
 
       <section id="video" class="video section">
         <div class="container">
-          <div class="section-title section-title--black">как мы работаем</div>
+          <div class="section-title section-title--black section-title--work">как мы работаем</div>
           <!-- <div id="yt-player"></div> -->
-          <div class="player hidden">
+
+          <div class="video__container">
+            <div class="video__player">
+                <video id="player" poster="image/player/cover.png">
+                    <source src="video/burger-promo.mp4" type="video/mp4">
+                </video>
+                <img src="image/player/Play_white.png" alt="" class="play video__player-img">
+            </div>
+            <div class="video__toolbar">
+                <div class="duration">
+                    <img src="image/player/Play_gray.png" alt="" class="play duration__img">
+                    <input type="range" class="duration__length" id="durationLevel">
+                </div>
+                <div class="sound">
+                    <img src="image/player/Volum_gray.png" class="sound__mic" id="mic" alt="">
+                    <div class="sound__volume">
+                        <input type="range" class="duration__length duration__length--other" id="micLevel">
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- <div class="player hidden">
             <div class="player__wrapper">
               <div class="yt-player"></div>
               <div class="player__splash"></div>
@@ -419,7 +440,7 @@
                 <span class="player__duration-estimate">0:00</span>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
 
@@ -607,7 +628,8 @@
   <script src="js/map.js"></script>
   <!-- <script src="js/onepagescroll.js"></script> -->
   <script src="js/onepagescroll1.js"></script>
-  <script src="js/player.js"></script>
+  <!-- <script src="js/onepagescroll2.js"></script> -->
+  <script src="js/player1.js"></script>
   <script src="js/hamburger.js"></script>
   <!-- <script-- src="js/validation.js"></script-->
 </body>
