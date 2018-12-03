@@ -137,6 +137,12 @@ footer {
 
   &--work {
     margin-bottom: rem(0px);
+      @include tablets {
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
       @include phones {
         margin-top: rem(60px);
       }
@@ -184,8 +190,9 @@ footer {
       padding-left: rem(20px);
       margin-bottom: rem(20px);
       font-size: rem(64px);
+      
     }
-    @include tablets {
+    @include phones {
       text-align: center;
       padding-left: rem(20px);
       margin-bottom: rem(20px);
