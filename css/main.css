@@ -386,7 +386,7 @@ body {
   overflow: hidden; }
 
 .maincontent {
-  top: -100%;
+  top: 0;
   position: relative; }
 
 h1,
@@ -428,6 +428,12 @@ footer {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden; }
+  @media (max-width: 768px) {
+    .section {
+      min-height: initial; } }
+  @media (max-width: 480px) {
+    .section {
+      min-height: initial; } }
   @media (max-width: 480px) {
     .section {
       min-height: initial; } }
@@ -1286,7 +1292,7 @@ footer {
   transition-property: max-width, opacity, visibility; }
   @media (max-width: 480px) {
     .menu-list__text {
-      font-size: 0.625rem; } }
+      font-size: 0.75rem; } }
 
 .map {
   width: 100%; }

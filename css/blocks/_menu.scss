@@ -104,7 +104,7 @@
   transition-property: max-width, opacity, visibility;
 
   @include phones {
-    font-size: rem(10px);
+    font-size: rem(12px);
   }
 }
 
