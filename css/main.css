@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -427,6 +428,9 @@ footer {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden; }
+  @media (max-width: 480px) {
+    .section {
+      min-height: initial; } }
   .section_centered {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -447,9 +451,12 @@ footer {
   text-align: center; }
   .section-title--work {
     margin-bottom: 0rem; }
+    @media (max-width: 480px) {
+      .section-title--work {
+        margin-top: 3.75rem; } }
   @media (max-width: 768px) {
     .section-title {
-      font-size: 63px; } }
+      font-size: 3.9375rem; } }
   @media (max-width: 480px) {
     .section-title--order {
       font-size: 3.4375rem;
@@ -468,7 +475,8 @@ footer {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        margin-bottom: 0rem; } }
+        margin-bottom: 0rem;
+        line-height: 1; } }
   .section-title--white {
     color: #fff; }
   .section-title--burger {
@@ -488,6 +496,9 @@ footer {
         padding-left: 1.25rem;
         margin-bottom: 1.25rem;
         font-size: 3rem; } }
+  @media (max-width: 480px) {
+    .section-title--best {
+      margin-bottom: 1.875rem; } }
 
 .hero {
   background: url(../image/backgrounds/video-bg.png);
@@ -509,6 +520,9 @@ footer {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; } }
+  @media (max-width: 480px) {
+    .hero__pic {
+      width: 80%; } }
 
 .hero__burger-pic {
   width: 28.1875rem;
@@ -539,6 +553,10 @@ footer {
     .hero__desk {
       width: 80%;
       text-align: center; } }
+  @media (max-width: 480px) {
+    .hero__desk {
+      width: 97%;
+      font-size: 3rem; } }
 
 .hero__content {
   display: -webkit-box;
@@ -833,9 +851,6 @@ footer {
   justify-content: center;
   -ms-flex-line-pack: center;
   align-content: center; }
-  @media (max-width: 480px) {
-    .best__content {
-      height: inherit; } }
 
 .best__list {
   list-style: none;
@@ -855,7 +870,8 @@ footer {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      height: 70%; } }
+      height: 70%;
+      margin-top: 1.25rem; } }
 
 .best__item {
   text-align: center;
@@ -906,7 +922,7 @@ footer {
   @media (max-width: 480px) {
     .best__logo {
       margin-bottom: 0rem;
-      margin-right: 2.5rem; } }
+      margin-right: 1.75rem; } }
 
 .best__item__content {
   text-align: center; }
@@ -928,6 +944,9 @@ footer {
   font-weight: 300;
   opacity: 0.7;
   line-height: 1.7; }
+  @media (max-width: 480px) {
+    .best__item-text {
+      margin-bottom: 1.25rem; } }
 
 .reviews {
   background: #000;
@@ -1085,6 +1104,10 @@ footer {
 
 .section-title--team {
   text-align: initial; }
+
+@media (max-width: 480px) {
+  .team-list {
+    margin-top: 0rem; } }
 
 .team-list__trigger {
   color: #fff;
@@ -1261,6 +1284,9 @@ footer {
   -webkit-transition-property: max-width, opacity, visibility;
   -o-transition-property: max-width, opacity, visibility;
   transition-property: max-width, opacity, visibility; }
+  @media (max-width: 480px) {
+    .menu-list__text {
+      font-size: 0.625rem; } }
 
 .map {
   width: 100%; }
@@ -1299,6 +1325,8 @@ footer {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  .contacts__tel__box:hover .phone__pic {
+    fill: green; }
   @media (max-width: 480px) {
     .contacts__tel__box {
       -webkit-box-pack: center;
@@ -1850,7 +1878,7 @@ footer {
         margin-left: 0.375rem; } }
     @media (max-width: 480px) {
       .burger__weight__title {
-        width: 123%; } }
+        width: 180%; } }
   @media (max-width: 768px) {
     .burger__weight {
       margin-top: 1.25rem;
@@ -1979,6 +2007,37 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+@media (max-width: 480px) {
+  .video__player {
+    display: none;
+    /* просто видео не влазит*/
+    max-width: initial; } }
+
+@media (max-width: 480px) {
+  .video__toolbar {
+    display: none;
+    /*просто видео не влазит*/ } }
+
+.video__phones {
+  display: none; }
+  @media (max-width: 480px) {
+    .video__phones {
+      display: block;
+      font-family: "Gagalin-Regular", serif;
+      text-align: center;
+      font-size: 1.75rem;
+      margin-bottom: 1.25rem; }
+      .video__phones p {
+        color: red; } }
+
+.btn--video {
+  display: none; }
+  @media (max-width: 480px) {
+    .btn--video {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
 
 .player__start {
   width: 0;

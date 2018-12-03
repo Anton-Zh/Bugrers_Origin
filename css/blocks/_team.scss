@@ -53,6 +53,12 @@
   text-align: initial;
 }
 
+.team-list {
+  @include phones {
+    margin-top: rem(0px);
+  }
+}
+
 .team-list__trigger {
   color: #fff;
   display: flex;

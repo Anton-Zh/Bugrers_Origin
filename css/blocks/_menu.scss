@@ -102,6 +102,10 @@
   opacity: 0;
   transition: 1s;
   transition-property: max-width, opacity, visibility;
+
+  @include phones {
+    font-size: rem(10px);
+  }
 }
 
 

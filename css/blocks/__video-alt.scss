@@ -1,0 +1,33 @@
+.video__player {
+  @include phones {
+    display: none; /* просто видео не влазит*/
+    max-width: initial;
+  }
+}
+
+.video__toolbar {
+  @include phones {
+    display: none; /*просто видео не влазит*/
+  }
+}
+
+.video__phones {
+  display: none;
+  @include phones {
+    display: block;
+    font-family: "Gagalin-Regular", serif;
+    text-align: center;
+    font-size: rem(28px);
+    margin-bottom: rem(20px);
+    & p {
+      color: red;
+    }
+  }
+}
+
+.btn--video {
+  display: none; 
+    @include phones {
+      display: flex;
+    }
+}

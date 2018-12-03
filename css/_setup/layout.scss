@@ -105,6 +105,10 @@ footer {
   display: flex;
   overflow: hidden;
 
+  @include phones {
+    min-height: initial;
+  }
+
   &_centered {
     display: flex;
     flex-direction: column;
@@ -121,12 +125,18 @@ footer {
   margin-bottom: rem(40px);
   text-align: center;
 
+  
+
   &--work {
     margin-bottom: rem(0px);
+      @include phones {
+        margin-top: rem(60px);
+      }
+
   }
 
   @include tablets {
-    font-size: 63px;
+    font-size: rem(63px);
   }
 
   &--order {
@@ -146,6 +156,7 @@ footer {
       justify-content: center;
       align-items: center;
       margin-bottom: rem(0px);
+      line-height: 1;
     }
 
   }
@@ -171,6 +182,12 @@ footer {
       padding-left: rem(20px);
       margin-bottom: rem(20px);
       font-size: rem(48px);
+    }
+  }
+
+  &--best {
+    @include phones {
+      margin-bottom: rem(30px);
     }
   }
 

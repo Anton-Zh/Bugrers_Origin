@@ -1,0 +1,7 @@
+.video__phones {
+  font-family: "Gagalin-Regular", serif;
+  text-align: center;
+  font-size: rem(28px);
+  margin-bottom: rem(20px); }
+  .video__phones p {
+    color: red; }

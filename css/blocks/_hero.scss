@@ -17,6 +17,9 @@
     margin-bottom: rem(30px);
     justify-content: center;
   }
+  @include phones {
+    width: 80%;
+  }
 }
 
 .hero__burger-pic {
@@ -53,6 +56,12 @@
   @include tablets {
     width: 80%;
     text-align: center;
+  }
+
+  @include phones {
+    width: 97%;
+    font-size: rem(48px);
+
   }
 }
 
