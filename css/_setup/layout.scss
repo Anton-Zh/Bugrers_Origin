@@ -105,16 +105,8 @@ footer {
   display: flex;
   overflow: hidden;
 
-  @media (max-width: 768px) {
-    min-height: initial;
-  }
-
-  @media (max-width: 480px) {
-    min-height: initial;
-  }
-  
   @include phones {
-    min-height: initial;
+    min-height: auto;
   }
 
   &_centered {

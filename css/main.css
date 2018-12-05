@@ -428,15 +428,9 @@ footer {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden; }
-  @media (max-width: 768px) {
-    .section {
-      min-height: initial; } }
   @media (max-width: 480px) {
     .section {
-      min-height: initial; } }
-  @media (max-width: 480px) {
-    .section {
-      min-height: initial; } }
+      min-height: auto; } }
   .section_centered {
     display: -webkit-box;
     display: -ms-flexbox;
